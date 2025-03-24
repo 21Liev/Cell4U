@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<link rel="icon" type="image/png" href="/C4Ue.png">		
+		<title>Cell4U</title>
+	</head>
+	<body class="overflow-x-hidden">
+		<div>
+		 <slot />
+	 	</div>
+	</body>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+</html>
+
+<style>
+html,body{
+		background-color: rgb(2, 6, 24);
+		scroll-behavior: smooth;
+	}
+body{
+	@apply grid place-content-center;
+}
+ body > div {
+	@apply container;
+ }
+</style>

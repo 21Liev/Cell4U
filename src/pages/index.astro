@@ -1,0 +1,341 @@
+---
+import Welcome from '../components/Welcome.astro';
+import Layout from '../layouts/Layout.astro';
+import './src/styles/global.css';
+
+// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
+//Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+---
+<Layout title="Cell4U">
+<!-------------------Main inicio------------------>
+  <main>
+<!-----------------------------------nav------------------------------->
+    <nav id="inicio" class="border-[#d6e8ff27] border bg-[#08203d] items-center flex">
+  <div class="max-w-screen-xl flex flex-wrap justify-between mx-auto p-4">
+    <button data-collapse-toggle="navbar-solid-bg" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-solid-bg" aria-expanded="false">
+        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+        </svg>
+    </button>
+<!-----------------------------------lista del nav------------------------------->
+      <div class="hidden w-full md:block md:w-auto" id="navbar-solid-bg">
+        <ul class="flex flex-col font-medium mt-4 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-transparent dark:border-gray-700">
+          <li class="duration-400 hover:scale-105 hover:bg-[#76849671] rounded-xs p-2">
+            <a href="#buscar" class="block py-2 px-3 md:p-0 text-white bg-blue-700 rounded-sm md:bg-transparent font-medium" aria-current="page">BUSCAR</a>
+          </li>
+          <li class="duration-400 hover:scale-105 hover:bg-[#76849671] rounded-xs p-2">
+            <a href="#fichat" class="block py-2 px-3 md:p-0 text-white bg-blue-700 rounded-sm md:bg-transparent font-medium" aria-current="page">FICHA TÉCNICA</a>
+          </li>
+          <li class="duration-400 hover:scale-105 hover:bg-[#76849671] rounded-xs p-2">
+            <a href="#precios" class="block py-2 px-3 md:p-0 text-white bg-blue-700 rounded-sm md:bg-transparent font-medium" aria-current="page">PRECIOS</a>
+          </li>
+          <li class="duration-400 hover:scale-105 hover:bg-[#76849671] rounded-xs p-2 animate-bounce">
+            <a href="#foot" class="block py-2 px-3 md:p-0 text-white bg-blue-700 rounded-sm md:bg-transparent font-medium " aria-current="page">¡FONDO!</a>
+          </li>
+        </ul>
+      </div>
+<!-----------------------------------lista del nav(fin)------------------------------->
+    </div>
+    </nav>
+<!-----------------------------------nav(fin)------------------------------->
+<!-----------------------------------Sección superior------------------------------->
+    <section class="w-screen h-125 bg-[#03346E] shadow-2xl shadow-[#bfd0f536] rounded-b-4xl">          
+<!-----------------------------------Titulo------------------------------->              
+    <div>
+      <h1 class="text-center text-7xl font-extrabold text-white pt-25">CELL<span id="buscar" class="text-blue-300">4U</span></h1>
+    </div>
+<!-----------------------------------Subtitulo------------------------------->              
+    <div>
+      <h2 class="font-bold text-center text-2xl text-white pt-18">¡COMPARAMOS CELULARES PARA SABER CUÁL  TE CONVIENE MÁS!</h2>   
+    </div>
+<!-----------------------------------Aviso------------------------------->              
+    <div class="justify-center text-center mt-7">
+      <p class="text-amber-200 font-medium animate-pulse mt-10">¡Aviso! La base de datos tiene una cantidad de equipos y datos limitada.</p>
+    </div>
+<!-----------------------------------Buscador------------------------------->              
+    <div>
+      <label class="relative shadow-xl shadow-[#000000b9] mx-auto mt-4 bg-white min-w-sm max-w-2xl flex flex-col md:flex-row py-2 px-2 rounded-2xl gap-2 focus-within:border-gray-300">
+        <div class="autocomplete relative w-full">
+          <input id="InputCelulares" type="text" name="Celulares" placeholder="Ingrese el nombre del celular aquí <----------" autocomplete="off" class="px-6 py-2 w-full rounded-md flex-1 outline-none bg-white font-medium">
+<!-----------------------------------Lista de sugerencias------------------------------->                                  
+            <ul id="results" class="absolute left-0 w-full bg-white shadow-lg rounded-md mt-1 hidden overflow-y-auto max-h-60 z-10 font-meidum"></ul>
+        </div>
+      </label>
+    </div>     
+    </section>
+<!-----------------------------------Sección superior(fin)------------------------------->
+<!-----------------------------------Sección de resultados------------------------------->
+    <section>
+    <h3 id="fichat" class="text-center text-4xl text-white pt-15 font-black relative mt-5 mb-15">DISPOSITIVOS</h3>
+    <h4 class="text-center text-2xl text-white font-medium relative mb-10">FICHA TÉCNICA:</h4>
+<!-----------------------------------Carta 1------------------------------->
+    <div class="flex-row flex justify-center gap-10 mt-10 mb-25">
+      <div>
+        <div id="device1" class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg dark:bg-gray-800 dark:border-gray-700 shadow-2xl shadow-[#8a8aa06c] mr-20">
+          <h4 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white text-center">DISPOSITIVO 1</h4>                      
+            <div class="relative flex flex-col rounded-lg bg-gray-800">
+              <nav class="flex min-w-[240px] flex-col gap-1 p-1.5">
+                <div role="button"class="text-white w-full items-center rounded-md p-3 transition-all hover:bg-gray-600 focus:bg-slate-100 font-medium">PANTALLA                  
+                  </div>
+                <div role="button"class="text-white  w-full items-center rounded-md p-3 transition-all hover:bg-gray-600 focus:bg-slate-100 font-medium">PROCESADOR
+                  </div>
+                <div role="button"class="text-white w-full items-center rounded-md p-3 transition-all hover:bg-gray-600 focus:bg-slate-100 font-medium">MEMORIA RAM
+                  </div>
+                <div role="button"class="text-white  w-full items-center rounded-md p-3 transition-all hover:bg-gray-600 focus:bg-slate-100 font-medium">ALMACENAMIENTO
+                  </div>
+                <div role="button"class="text-white  w-full items-center rounded-md p-3 transition-all hover:bg-gray-600 focus:bg-slate-100 font-medium">CÁMARA TRASERA
+                  </div>
+                <div role="button"class="text-white  w-full items-center rounded-md p-3 transition-all hover:bg-gray-600 focus:bg-slate-100 font-medium">CÁMARA FRONTAL
+                  </div>
+                <div role="button"class="text-white  w-full items-center rounded-md p-3 transition-all hover:bg-gray-600 focus:bg-slate-100 font-medium">BATERÍA
+                  </div>
+                <div role="button"class="text-white  w-full items-center rounded-md p-3 transition-all hover:bg-gray-600 focus:bg-slate-100 font-medium">SISTEMA OPERATIVO (SO)
+                  </div>
+                <div role="button"class="text-white w-full items-center rounded-md p-3 transition-all hover:bg-gray-600 focus:bg-slate-100 font-medium">CONECTIVIDAD
+                  </div>
+                <div role="button"class="text-white  w-full items-center rounded-md p-3 transition-all hover:bg-gray-600 focus:bg-slate-100 font-medium">EXTRAS
+                  </div>
+              </nav>
+            </div>
+        </div>
+      </div>
+<!-----------------------------------Carta 2------------------------------->
+    <div>
+      <div id="device2" class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg dark:bg-gray-800 dark:border-gray-700 shadow-2xl shadow-[#8a8aa06c]">
+        <h4 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white text-center">DISPOSITIVO 2</h4>  
+          <div class="relative flex flex-col rounded-lg bg-gray-800">
+            <nav class="flex min-w-[240px] flex-col gap-1 p-1.5">
+              <div role="button"class="text-white w-full items-center rounded-md p-3 transition-all hover:bg-gray-600 focus:bg-slate-100 font-medium">PANTALLA
+                </div>
+              <div role="button"class="text-white  w-full items-center rounded-md p-3 transition-all hover:bg-gray-600 focus:bg-slate-100 font-medium">PROCESADOR
+                </div>
+              <div role="button"class="text-white  w-full items-center rounded-md p-3 transition-all hover:bg-gray-600 focus:bg-slate-100 font-medium">MEMORIA RAM
+                  </div>
+              <div role="button"class="text-white   w-full items-center rounded-md p-3 transition-all hover:bg-gray-600 focus:bg-slate-100 font-medium">NAMIENTO
+                    </div>
+              <div role="button"class="text-white   w-full items-center rounded-md p-3 transition-all hover:bg-gray-600 focus:bg-slate-100 font-medium">CÁMARA TRASERA
+                    </div>
+              <div role="button"class="text-white   w-full items-center rounded-md p-3 transition-all hover:bg-gray-600 focus:bg-slate-100 font-medium">CÁMARA FRONTAL
+                    </div>
+              <div role="button"class="text-white   w-full items-center rounded-md p-3 transition-all hover:bg-gray-600 focus:bg-slate-100 font-medium">BATERÍA
+                    </div>
+              <div role="button"class="text-white  w-full items-center rounded-md p-3 transition-all hover:bg-gray-600 focus:bg-slate-100 font-medium">SISTEMA OPERATIVO (SO)
+                    </div>
+                    <div role="button"class="text-white w-full items-center rounded-md p-3 transition-all hover:bg-gray-600 focus:bg-slate-100 font-medium">CONECTIVIDAD
+                    </div>
+              <div role="button"class="text-white  w-full items-center rounded-md p-3 transition-all hover:bg-gray-600 focus:bg-slate-100 font-medium">EXTRAS
+                    </div>
+            </nav>
+          </div>
+      </div>
+    </div>
+   </div>
+<!-----------------------------------Precio y compras------------------------------->   
+    <div>
+      <h3 id="precios" class="text-center text-2xl text-white font-black relative mb-10">PRECIO Y COMPRAS:</h3>
+    </div>
+        <div class="flex-row flex justify-center gap-10 mt-10 mb-25 ">
+<!-----------------------------------Carta de precios y compras ------------------------------->   
+    <div class="max-w-sm w-full bg-white rounded-lg dark:bg-gray-800 p-4 md:p-6 shadow-[#8a8aa06c] shadow-2xl  border border-gray-200  dark:border-gray-700">
+      <div class="text-center border-gray-200 border-b dark:border-gray-700 pb-3">
+        <dl>
+          <dd class="leading-none text-xl font-medium text-gray-900 dark:text-white">COMPARACIÓN DE PRECIOS</dd>
+        </dl>
+      </div>
+<!-----------------------------------Precios ------------------------------->      
+      <div class="grid grid-cols-2 py-3 mt-3">
+        <dl>
+          <dt id="device1-name" class="font-medium text-xl text-blue-300 pb-1 text-center">Nombre del Dispositivo 1</dt>
+          <dd id="device1-price"class="leading-none text-xl font-bold text-[#5ed367] text-center">0,0</dd> <!-- Reemplazado por el id -->
+        </dl>
+        <dl>
+          <dt id="device2-name" class="font-medium text-xl text-blue-300 pb-1 text-center">Nombre del Dispositivo 2</dt>
+          <dd id= "device2-price"class="leading-none text-xl font-bold text-[#5ed367] text-center">0,0</dd> 
+        </dl>
+      </div>
+<!-----------------------------------Donde comprar y botones------------------------------->  
+      <div class="text-center border-gray-200 border-b dark:border-gray-700 pb-3">
+        <dl>
+          <dd class="leading-none text-xl font-medium text-gray-900 dark:text-white mt-7">¿DÓNDE COMPRAR?</dd>
+        </dl>  
+      </div>
+      <div class="pt-5">
+        <div class="inline-flex rounded-lg shadow-sm pl-3">
+          <button type="button" class="inline-flex items-center gap-x-2 -ms-px first:rounded-s-lg first:ms-0 last:rounded-e-lg opacity-45 bg-[#e5e7f5] shadow-xs shadow-[#c3c7ffe1] hover:opacity-100 focus:shadow-2xl sm:p-5 transition duration-400 hover:scale-105 ">
+            <a target="_blank" rel="noopener noreferrer" href="https://www.amazon.com/s?k=celulares&__mk_es_US=%C3%85M%C3%85%C5%BD%C3%95%C3%91&ref=nb_sb_noss">
+              <img src="https://img.icons8.com/?size=50&id=21295&format=png&color=000000" alt="imagen del logo de amazon">
+            </a>               
+          </button>
+          <button type="button" class="inline-flex items-center gap-x-2 -ms-px first:rounded-s-lg first:ms-0 last:rounded-e-lg opacity-45 bg-[#e4e27b] shadow-xs shadow-[#c8e3f0ab] hover:opacity-100 focus:shadow-2xl sm:p-5 transition duration-400 hover:scale-105 ">
+            <a target="_blank" rel="noopener noreferrer" href="https://www.mercadolibre.com.ar/c/celulares-y-telefonos#menu=categories">
+              <img src="https://img.icons8.com/?size=50&id=nTLVtpxsNPaz&format=png&color=000000" alt="imagen del logo de mercado libre">
+            </a>
+          </button>
+          <button type="button" class="inline-flex items-center gap-x-2 -ms-px first:rounded-s-lg first:ms-0 last:rounded-e-lg opacity-45 bg-[#020202] shadow-xs shadow-[#c8e3f0ab] hover:opacity-100 focus:shadow-2xl sm:p-5 transition duration-400 hover:scale-105 ">
+            <a target="_blank" rel="noopener noreferrer" href="https://ar.ebay.com/b/Cell-Phones-Smartphones/9355/bn_320094">
+              <img src="https://img.icons8.com/?size=50&id=31079&format=png&color=000000" alt="imagen del logo de ebay">
+            </a>
+          </button>
+            <button type="button" class="inline-flex items-center gap-x-2 -ms-px first:rounded-s-lg first:ms-0 last:rounded-e-lg opacity-45 bg-[#d1ada4] shadow-xs shadow-[#c8e3f0ab] hover:opacity-100 focus:shadow-2xl sm:p-5 transition duration-400 hover:scale-105 ">
+              <a target="_blank" rel="noopener noreferrer" href="https://es.aliexpress.com/w/wholesale-celulares.html?spm=a2g0o.best.search.0">
+                <img src="https://img.icons8.com/?size=50&id=KMzgcKtJWVGV&format=png&color=000000" alt="imagen del logo de aliexpress">
+              </a>
+            </button>                
+        </div>
+      </div>
+    </div>
+    </section>
+<!-----------------------------------Sección de resultados(fins------------------------------->
+<!-----------------------------------Footer------------------------------->
+    <footer id="foot" class="bg-[#08203d] rounded-lg m-4 shadow-[#8a8aa038] shadow-2xl border border-[#8a8aa038]">
+    <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center">
+      <span class="font-medium text-sm text-white sm:text-center animate-bounce pr-32">¿Footer?
+        </span>
+      <span class="font-medium text-sm text-white sm:text-center pr-7 pl-60">Tecnologías utilizadas:
+        </span>          
+      <span class=" duration-400 hover:scale-105 hover:bg-[#00000031] rounded-xl p-2">
+          <img src="https://img.icons8.com/?size=30&id=lckHFUP7nJhG&format=png&color=000000" alt="">
+        </span>      
+      <span class=" duration-400 hover:scale-105 hover:bg-[#00000031] rounded-xl p-2">
+          <img src="https://img.icons8.com/?size=30&id=108784&format=png&color=000000" alt="">
+        </span>
+      <span class=" duration-400 hover:scale-105 hover:bg-[#00000031] rounded-xl p-2">
+          <img src="https://img.icons8.com/?size=30&id=13441&format=png&color=000000" alt="">
+        </span>
+      <span class=" duration-400 hover:scale-105 hover:bg-[#00000031] rounded-xl p-2">
+          <img src="https://img.icons8.com/?size=30&id=hsPbhkOH4FMe&format=png&color=000000" alt="">
+        </span>
+      <span class=" duration-400 hover:scale-105 hover:bg-[#00000031] rounded-xl p-2">
+          <img src="https://img.icons8.com/?size=30&id=4PiNHtUJVbLs&format=png&color=000000" alt="">
+        </span>
+      <div class="pl-70">
+        <ul class="items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0 flex">
+          <li class="duration-400 hover:scale-105 hover:bg-[#76849671] rounded-xs p-2">
+            <a href="#inicio" class="font-medium text-sm text-white sm:text-center transition">Volver al inicio</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    </footer>
+<!-----------------------------------Footer(fin)------------------------------->          
+  </main>  
+<!-------------------Main(final)------------------>
+<!-------------------Importaciones de librerias------------------>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+<!-------------------Script------------------>
+<script type="module">
+  document.addEventListener("DOMContentLoaded", () => {
+    fetch("/celulares.json")
+      .then(response => response.json())
+      .then(data => {
+        console.log("📂 JSON cargado correctamente:", data);
+          const searchElement = document.getElementById("InputCelulares");
+          const resultsList = document.getElementById("results");
+          let selectedDevices = [];////////Guarda los celulares seleccionados/////////
+          let device1 = document.getElementById("device1");///////////Elemento donde mostrar el primer dispositivo////////
+          let device2 = document.getElementById("device2");///////(Elemento donde mostrar el segundo dispositivo//////////              
+  /////Eventos para las cartas y manejo de los datos///////////////
+  if (searchElement && resultsList) {searchElement.addEventListener("input", function () {
+    let query = searchElement.value.trim().toLowerCase();
+      ///////////////Limpiar sugerencias si no hay texto////////
+      if (query.length === 0) {
+        resultsList.innerHTML = '';
+        resultsList.classList.add("hidden");
+        return;
+      }
+      ////////////////Filtrar datos/////////////////
+    let results = data.filter(cel =>cel.model.toLowerCase().includes(query) || cel.oem.toLowerCase().includes(query));
+      resultsList.innerHTML = '';/////////////Limpiar lista antes de agregar nuevos resultados//////////////////
+      if (results.length > 0) {results.forEach((cel) => {let li = document.createElement("li");
+        li.textContent = `${cel.oem} - ${cel.model}`;
+        li.classList.add("cursor-pointer", "hover:bg-blue-100", "px-4", "py-2", "text-black", "font-medium");
+      //////////////////Evento para seleccionar un celular///////////////
+        li.addEventListener("click", () => {
+      /////////////// Si ya hay dos dispositivos seleccionados, reiniciar la selección////////////////////
+      if (selectedDevices.length >= 2) {selectedDevices = [];}
+      //////////////////Agregar el nuevo dispositivo//////////////////////////
+        selectedDevices.push(cel);
+      //////////////////Asignar a la primera carta disponible/////////////////
+      if (selectedDevices.length === 1 && device1) {actualizarCarta(device1, cel);} 
+        else if (selectedDevices.length === 2 && device2) {
+          actualizarCarta(device2, cel);}
+      /////////////////////Llamar a la función para actualizar nombres y precios////////////////
+          actualizarNombresYPrecios();
+      ////////////////////// Limpiar input y sugerencias//////////////////////////////////
+          searchElement.value = '';
+          resultsList.innerHTML = '';
+          resultsList.classList.add("hidden");  
+      ////////////////////Llamar a la función para actualizar la gráfica/////////////////////
+      if (selectedDevices.length === 2) {actualizarGrafica();}});
+          resultsList.appendChild(li);});
+          resultsList.classList.remove("hidden"); // Mostrar resultados
+          }else{
+          resultsList.classList.add("hidden"); // Ocultar si no hay resultados
+          }});
+        // Ocultar sugerencias si el usuario hace clic fuera del input
+        document.addEventListener("click", (e) => {
+            if (!searchElement.contains(e.target) && !resultsList.contains(e.target)) {
+                resultsList.classList.add("hidden");
+            }
+        });
+    }
+  ///////////Eventos para las cartas y manejo de los datos(fin///////////////
+
+
+  ///////////Función para actualizar una carta con datos del celular seleccionado/////
+  function actualizarCarta(carta, celular) {
+        if (!carta) return;
+          let titulo = carta.querySelector("h4");
+        if (titulo) {
+          titulo.textContent = `${celular.oem ?? "Desconocido"} - ${celular.model ?? "Sin modelo"}`;
+        }
+          let detalles = carta.querySelectorAll("nav div");
+        if (!detalles || detalles.length < 10) return;
+        //Manterner la estructura!!!!
+        detalles[0].innerHTML = `<span class="font-bold text-blue-300">Pantalla:</span> ${celular.display_size ?? "No disponible"} - ${celular.display_resolution ?? ""}`;
+        detalles[1].innerHTML = `<span class="font-bold text-blue-300">Procesador:</span> ${celular.platform_cpu ?? "No disponible"}`;
+        detalles[2].innerHTML = `<span class="font-bold text-blue-300">Memoria RAM:</span> ${celular.memory_internal ? celular.memory_internal.split(" ")[1] : "No disponible"}`;
+        detalles[3].innerHTML = `<span class="font-bold text-blue-300">Almacenamiento:</span> ${celular.memory_internal ? celular.memory_internal.split(" ")[0] : "No disponible"}`;
+        detalles[4].innerHTML = `<span class="font-bold text-blue-300">Cámara Trasera:</span> ${celular.main_camera_dual ?? "No disponible"}`;
+        detalles[5].innerHTML = `<span class="font-bold text-blue-300">Cámara Frontal:</span> ${celular.selfie_camera_dual ?? "No disponible"}`;
+        detalles[6].innerHTML = `<span class="font-bold text-blue-300">Batería:</span> ${celular.battery ?? "No disponible"}`;
+        detalles[7].innerHTML = `<span class="font-bold text-blue-300">Sistema Operativo:</span> ${celular.platform_os ?? "No disponible"}`;
+        detalles[8].innerHTML = `<span class="font-bold text-blue-300">Conectividad:</span> ${celular.comms_wlan ?? "No disponible"}, ${celular.comms_bluetooth ?? ""}, ${celular.comms_nfc ?? ""}`;
+        detalles[9].innerHTML = `<span class="font-bold text-blue-300">Extras:</span> ${celular.features_sensors ?? "No disponible"}`;
+  }
+  //////////Función para actualizar una carta con datos del celular seleccionado(fin)//////
+
+
+  //////////Función para actualizar los nombres y precios en el HTML////////////
+  function actualizarNombresYPrecios() {
+  ////////Verificar que ambos dispositivos estén seleccionados///////////
+    if (selectedDevices.length === 2) {
+      //////////////////Función para limpiar y formatear el precio
+      function limpiarPrecio(precio) {
+        let precioLimpio = precio.trim();// Eliminar espacios adicionales y caracteres extraños (incluyendo códigos Unicode como <e2>, <c2>, etc.)
+          precioLimpio = precioLimpio.replace(/[\u200B-\u200D\uFEFF\u00A0\u200E\u200F\u202A-\u202E\u2060\u202F\u00A3]/g, '');// Eliminar caracteres Unicode extraños
+            precioLimpio = precioLimpio.replace(/[^0-9,.-]/g, '');// Eliminar símbolos de moneda (como €, $, etc.)
+              precioLimpio = precioLimpio.replace(",", ".");// Reemplazar coma por punto para decimales si es necesario
+                let precioFloat = parseFloat(precioLimpio);// Convertir a número flotante
+                  if (!isNaN(precioFloat)) {// Asegurarse de que es un número válido
+                    let precioEntero = Math.floor(precioFloat);// Truncar a 4 dígitos enteros
+                      precioEntero = parseInt(precioEntero.toString().slice(0, 4));//Limitar el precio a 4 dígitos
+                        return new Intl.NumberFormat('es-ES', {style: 'currency', currency: 'EUR'}).format(precioEntero);// Devolver el precio formateado sin decimales
+    } else {
+      return "Precio no disponible";
+        }
+      }
+  //////////// Asignar el nombre y precio del dispositivo 1//////////////////
+    document.querySelector("#device1-name").textContent = selectedDevices[0].model;
+    document.querySelector("#device1-price").textContent = limpiarPrecio(selectedDevices[0].misc_price);
+  /////////// Asignar el nombre y precio del dispositivo 2///////////////////
+    document.querySelector("#device2-name").textContent = selectedDevices[1].model;
+    document.querySelector("#device2-price").textContent = limpiarPrecio(selectedDevices[1].misc_price);
+    }
+  }
+  //////////Función para actualizar los nombres y precios en el HTML(fin)  ////////
+    }).catch(error => console.error("❌ Error al cargar el JSON:", error));
+  });
+</script>
+</Layout>
